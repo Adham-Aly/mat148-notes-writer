@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>Title</title>
+<!-- Replace KATEX_DIST (3 places) with the URL printed by scripts/setup.sh -->
+<link rel="stylesheet" href="KATEX_DIST/katex.min.css">
+<script src="KATEX_DIST/katex.min.js"></script>
+<script src="KATEX_DIST/contrib/auto-render.min.js"></script>
+<style>
+ body{font-family:KaTeX_Main,'Latin Modern Roman',Georgia,serif;font-size:11.5pt;line-height:1.5;color:#1a1a1a;max-width:6.5in;margin:auto}
+ .katex{font-size:1em}
+ h1{font-size:20pt;font-weight:normal;text-align:center;margin:0 0 4px}
+ .sub{text-align:center;color:#555;margin-bottom:18px}
+ .thread{font-style:italic;margin:0 0 20px;padding:0 12px}
+ h2{font-size:14pt;font-weight:bold;margin:24px 0 8px;border-bottom:0.5px solid #999;padding-bottom:2px;break-after:avoid}
+ h3{font-size:12pt;font-weight:bold;margin:16px 0 6px;break-after:avoid}
+ .box{margin:10px 0;padding:7px 12px;break-inside:avoid}
+ .defn{border-left:3px solid #2b5aa8;background:#f3f6fc}
+ .thm{border:1px solid #333}
+ .defn>b:first-child,.thm>b:first-child{font-variant:small-caps}
+ .plan{font-style:italic;color:#333;margin:8px 0 4px;break-after:avoid}
+ .proof::before{content:'Proof. ';font-style:italic}
+ .proof::after{content:'\220E';float:right}
+ .proof{margin-bottom:10px}
+ .idea{background:#fbf7ec;border-left:3px solid #c8962e;font-size:10.5pt}
+ .recall{background:#f1f5f1;border-left:3px solid #4a8a55;font-size:10.5pt}
+ .check{border:1px dashed #888;font-size:10.5pt}
+ .label{font-variant:small-caps;font-weight:bold;margin-right:6px}
+ figure{margin:8px 0;text-align:center;break-inside:avoid}
+ figcaption{font-size:10pt;color:#444;margin-top:2px}
+ svg text{font-family:KaTeX_Main,serif;font-size:13px;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+ table{border-collapse:collapse;margin:10px auto;break-inside:avoid;font-size:10.5pt}
+ th,td{padding:2px 9px;text-align:center}
+ thead th{border-bottom:1px solid #333;font-weight:bold}
+ tbody tr:last-child td{border-bottom:0.5px solid #999}
+ td.h{text-align:left;border-right:0.5px solid #999}
+ ol,ul{margin:4px 0;padding-left:22px}
+ .ans p{margin:4px 0}
+ .nw{white-space:nowrap}
+ @page{size:Letter;margin:0.9in 1in}
+</style></head><body>
+<h1>Title</h1><div class="sub">Topic / course / chapter</div>
+<p class="thread">Through-line, 1-3 sentences.</p>
+
+<!-- Building blocks:
+<h2>1. Section</h2>
+<h3>1.1 Subsection</h3>
+<div class="box defn"><b>Definition (Name).</b> verbatim statement ...</div>
+<div class="box thm"><b>Theorem (Name).</b> verbatim statement ... <ol><li>...</li></ol></div>
+<p>(One-line clarifying note beside a statement that leaves something implicit.)</p>
+<p class="plan">Plan: strategy in the approach the recon file recorded ...</p>
+<div class="proof">...</div>
+<div class="box idea"><span class="label">Idea</span> ...</div>
+<div class="box idea"><span class="label">Remark</span> verbatim labelled remark ...</div>
+<div class="box recall"><span class="label">Recall</span> ...</div>
+<p><span class="label">Example.</span> ...</p>
+<p><strong>Caution: ...</strong> counterexample ...</p>
+<div class="box check"><span class="label">Quick check 1</span> ...</div>
+<table><tbody><tr><td class="h">$x$</td><td>$1.9$</td><td>$1.99$</td></tr><tr><td class="h">$f(x)$</td><td>...</td><td>...</td></tr></tbody></table>
+<figure>{{FIG:<name>}}<figcaption>...</figcaption></figure>   (matches def f_<name>() in figs.py; hyphens become underscores)
+<h2>Answers to quick checks</h2><div class="ans"><p><b>1.</b> ...</p></div>
+Write < and > inside maths as \lt and \gt.
+-->
+
+<script>
+renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false},{left:'$',right:'$',display:false}],throwOnError:false});
+window.__mathDone=true;
+</script></body></html>
