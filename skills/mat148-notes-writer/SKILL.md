@@ -1,5 +1,5 @@
 ---
-name: "calc-notes-writer"
+name: "mat148-notes-writer"
 description: "Turn a chapter or run of sections of a calculus/analysis textbook PDF into an original, intuitive, lean, LaTeX-typeset PDF of notes. A recon pass by subagents records what the source covers: every definition, theorem, lemma and formula verbatim (back-references by number replaced with names), which results are proved and by what overall approach, how much explanation and which kinds of worked example each concept received, and every figure in reproducible detail. The notes are then written from scratch from that recon file alone, with the verbatim statements kept, proofs only where the source has them (in the source's approach), and the source never looked at again. Use when the user names a textbook PDF and a chapter or section range and wants notes made from it."
 ---
 
@@ -160,7 +160,7 @@ The document is authored as a single HTML file and printed to PDF with headless 
 Setup (idempotent; fast after the first run). Paths are relative to this skill's directory:
 
 ```bash
-bash scripts/setup.sh        # installs KaTeX + Chromium into ~/.cache/calc-notes-writer, prints the KaTeX URL
+bash scripts/setup.sh        # installs KaTeX + Chromium into ~/.cache/mat148-notes-writer, prints the KaTeX URL
 ```
 
 Start the HTML from `assets/template.html`: read it, replace `KATEX_DIST` (three places) with the URL that `setup.sh` printed, and write the document into the body using the template's building blocks. Author it as a *source* file in the scratchpad (`src.html`) with `{{FIG:name}}` placeholders where figures go. The CSS uses `KaTeX_Main`, a Computer Modern lookalike, for body text so prose and maths match. Maths goes in `$...$` (inline) and `$$...$$` (display). Write `\lt` and `\gt` for `<` and `>` inside maths so the HTML parser never sees a bare angle bracket.

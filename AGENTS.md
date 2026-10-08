@@ -1,21 +1,21 @@
-# Working on calc-notes-writer
+# Working on mat148-notes-writer
 
-This repository publishes one agent skill, `skills/calc-notes-writer/`. The skill turns a chapter or section range of a calculus/analysis textbook PDF into an original, intuitive, lean, LaTeX-typeset PDF of notes. Read `skills/calc-notes-writer/SKILL.md` first; this file records the intent behind it so edits keep the workflow intact.
+This repository publishes one agent skill, `skills/mat148-notes-writer/`. The skill turns a chapter or section range of a calculus/analysis textbook PDF into an original, intuitive, lean, LaTeX-typeset PDF of notes. Read `skills/mat148-notes-writer/SKILL.md` first; this file records the intent behind it so edits keep the workflow intact.
 
 ## Layout
 
 ```
-skills/calc-notes-writer/
+skills/mat148-notes-writer/
   SKILL.md                      the workflow the agent follows (intake, locate, recon, wall, plan, write, typeset, check, deliver)
   references/recon-brief.md     what recon subagents read; defines exactly what they record and what they never record
   references/recon-prompts.md   fill-in prompts for the page-locator subagent and the recon subagents, plus follow-up wording
   assets/template.html          HTML/CSS skeleton (KaTeX, theorem/definition/idea/recall/check boxes, tables, figures)
   assets/figs.py                figure library: maths-to-pixel panels, computed curves, bands, dots; {{FIG:name}} substitution
-  scripts/setup.sh              installs KaTeX + Playwright Chromium into ~/.cache/calc-notes-writer (idempotent)
+  scripts/setup.sh              installs KaTeX + Playwright Chromium into ~/.cache/mat148-notes-writer (idempotent)
   scripts/render.mjs            HTML -> PDF with headless Chromium; fails on any unparsed formula or missing asset
 ```
 
-The repo root (`README.md`, `AGENTS.md`, `CLAUDE.md`, `LICENSE`) is packaging only. The skill must stay self-contained under `skills/calc-notes-writer/` so it installs with `npx skills add Adham-Aly/calc-notes-writer`.
+The repo root (`README.md`, `AGENTS.md`, `CLAUDE.md`, `LICENSE`) is packaging only. The skill must stay self-contained under `skills/mat148-notes-writer/` so it installs with `npx skills add Adham-Aly/mat148-notes-writer`.
 
 ## The non-negotiables
 
@@ -65,7 +65,7 @@ These are the user's requirements. Every one of them is equally important; do no
 
 ## Editing this repo
 
-- Keep the skill self-contained under `skills/calc-notes-writer/`; nothing in it may reference files outside that directory.
+- Keep the skill self-contained under `skills/mat148-notes-writer/`; nothing in it may reference files outside that directory.
 - `SKILL.md`, `references/recon-brief.md` and `references/recon-prompts.md` must stay consistent with each other and with the non-negotiables above; a change to what recon records needs all three updated.
 - Test changes to `assets/figs.py` or `assets/template.html` end to end: substitute a placeholder, render with `scripts/render.mjs`, rasterize, and look at the page.
 - Commit messages: plain, descriptive, no co-author trailers.
