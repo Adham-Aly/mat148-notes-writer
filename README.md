@@ -10,7 +10,7 @@ It is not a summariser. Subagents inspect the textbook once and record what it c
 npx skills add Adham-Aly/calc-notes-writer
 ```
 
-Requirements on the machine running the skill: `node`/`npm` (KaTeX and headless Chromium are installed on first use into `~/.cache/calc-notes-writer`), `python3`, and poppler (`pdfinfo`, `pdftoppm`).
+Requirements on the machine running the skill: `node`/`npm` (KaTeX and headless Chromium are installed on first use into `~/.cache/calc-notes-writer`; set `CALC_NOTES_DEPS` to use a different directory), `python3`, and poppler (`pdfinfo`, `pdftoppm`).
 
 ## Use
 
