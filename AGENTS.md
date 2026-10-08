@@ -11,7 +11,7 @@ skills/calc-notes-writer/
   references/recon-prompts.md   fill-in prompts for the page-locator subagent and the recon subagents, plus follow-up wording
   assets/template.html          HTML/CSS skeleton (KaTeX, theorem/definition/idea/recall/check boxes, tables, figures)
   assets/figs.py                figure library: maths-to-pixel panels, computed curves, bands, dots; {{FIG:name}} substitution
-  scripts/setup.sh              installs KaTeX + Playwright Chromium into ~/.cache/math-notes-rewrite (idempotent)
+  scripts/setup.sh              installs KaTeX + Playwright Chromium into ~/.cache/calc-notes-writer (idempotent)
   scripts/render.mjs            HTML -> PDF with headless Chromium; fails on any unparsed formula or missing asset
 ```
 

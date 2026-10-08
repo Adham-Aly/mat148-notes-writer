@@ -4,7 +4,7 @@
 # in place of KATEX_DIST in assets/template.html.
 set -euo pipefail
 
-DEPS="${MATH_NOTES_DEPS:-$HOME/.cache/math-notes-rewrite}"
+DEPS="${CALC_NOTES_DEPS:-$HOME/.cache/calc-notes-writer}"
 mkdir -p "$DEPS"
 cd "$DEPS"
 [ -f package.json ] || echo '{"private":true}' > package.json

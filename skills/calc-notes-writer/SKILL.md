@@ -160,7 +160,7 @@ The document is authored as a single HTML file and printed to PDF with headless 
 Setup (idempotent; fast after the first run). Paths are relative to this skill's directory:
 
 ```bash
-bash scripts/setup.sh        # installs KaTeX + Chromium into ~/.cache/math-notes-rewrite, prints the KaTeX URL
+bash scripts/setup.sh        # installs KaTeX + Chromium into ~/.cache/calc-notes-writer, prints the KaTeX URL
 ```
 
 Start the HTML from `assets/template.html`: read it, replace `KATEX_DIST` (three places) with the URL that `setup.sh` printed, and write the document into the body using the template's building blocks. Author it as a *source* file in the scratchpad (`src.html`) with `{{FIG:name}}` placeholders where figures go. The CSS uses `KaTeX_Main`, a Computer Modern lookalike, for body text so prose and maths match. Maths goes in `$...$` (inline) and `$$...$$` (display). Write `\lt` and `\gt` for `<` and `>` inside maths so the HTML parser never sees a bare angle bracket.
